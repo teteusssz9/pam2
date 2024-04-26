@@ -2,25 +2,28 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
         <link href="css/estilo.css" rel="stylesheet" />
+        <link href="css-bootstrap/bootstrap.css"/>
         <title>App Fernando</title>
     </head>
     <body>
-        <div id="layout">
-            <div id="top"></div>
-            <div id="meio">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-            </div>
-            <div id="footer"></div>
+        <div class="row">
+            <div class="col-sm-12"></div>
+            <label>cep</label>
+            <input type="text" id="cep" />
         </div>
-       
+
+        <div class="row">
+            <div class="col-sm-12"></div>
+            <button id="botao" class="btn btn-primary">
+                Consultar
+            </button>
+        </div>
+       <script src="js-bootstrap/bootstrap.bundle.js"></script>
+       <script src="js/index.js"></script>
     </body>
 </html>
