@@ -1,11 +1,18 @@
 function consultacep()
 {
+    let campo = document.querySelector("#cep");
     let requisicao = new XMLHttpRequest();
-    let url = "https://viacep.com.br/ws/17015220/json/";
+    let url = "https://viacep.com.br/ws/" + campo.value + "/json/";
     requisicao.open("GET", url);
     requisicao.send();
     requisicao.onload = function(){
-        alert(JSON.parse(requisicao.response).logradouro);
+        let objetoCEP = JSON.parse(requisicao.response)
+        let campoEndereco = document.querySelector("#logradouro")
+        let campoLocalidade = document.querySelector("#localidade")
+        let campoBairro = document.querySelector("#bairro")
+        campoEndereco.value = objetoCEP.logradouro
+        campoLocalidade.value = objetoCEP.localidade
+        campoBairro.value = objetoCEP.bairro
     }
 }
 
