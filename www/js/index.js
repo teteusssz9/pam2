@@ -7,8 +7,8 @@ function consultacep()
     requisicao.send();
     requisicao.onload = function(){
         let objetoCEP = JSON.parse(requisicao.response)
-        let campoEndereco = document.querySelector("#logradouro")
-        let campoLocalidade = document.querySelector("#localidade")
+        let campoEndereco = document.querySelector("#endereco")
+        let campoLocalidade = document.querySelector("#cidade")
         let campoBairro = document.querySelector("#bairro")
         campoEndereco.value = objetoCEP.logradouro
         campoLocalidade.value = objetoCEP.localidade

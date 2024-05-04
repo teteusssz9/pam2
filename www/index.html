@@ -80,17 +80,17 @@
 
       <div class="row">
         <div class="col-xs-12">
+            <label>Endereço</label>
+            <input type="text" id="endereco">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
             <label>Numero</label>
             <input type="text" id="numero">
         </div>
       </div>
-
-        <div class="row">
-            <div class="col-xs-12">
-                <label>Endereço</label>
-                <input type="text" id="logradouro">
-            </div>
-        </div>
 
         <div class="row">
             <div class="col-xs-12">
@@ -101,9 +101,16 @@
 
         <div class="row">
             <div class="col-xs-12">
-                <label>Localidade</label>
-                <input type="text" id="localidade">
+                <label>Cidade</label>
+                <input type="text" id="cidade">
             </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+              <label>Estado</label>
+              <input type="text" id="estado">
+          </div>
         </div>
 
         <div class="row">
@@ -119,8 +126,26 @@
               Salvar Dados
           </button>
       </div>
+
+        <div class="row">
+          <div class="col-xs-12"></div>
+          <button class="btn btn-warning" onclick="lerclientes()">
+              Listar Clientes
+          </button>
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Celular</th>
+            </tr>
+          </thead>
+        </table>
+
        <script src="js-bootstrap/bootstrap.bundle.js"></script>
        <script src="js/index.js"></script>
        <script src="js/cadastrocliente.js"></script>
+       <script src="js/lerclientes.js"></script>
     </body>
 </html>
