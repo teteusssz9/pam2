@@ -1,151 +1,154 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link href="css-bootstrap/bootstrap.css" rel="stylesheet"/>
-        <link href="css/estilo.css" rel="stylesheet" />
-        <title>App Fernando</title>
-        <style>
-            body {
-                background-color: black;
-                color: white;
-            }
-        </style>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown link
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <link href="css-bootstrap/bootstrap.css" rel="stylesheet" />
+  <link href="css/estilo.css" rel="stylesheet" />
+  <title>App Fernando</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
 
-
-        <div class="row">
-            <div class="col-sm-12"></div>
-            <label>cep</label>
-            <input type="text" id="cep" />
+<body>
+  <!-- Login Page -->
+  <div data-role="page" id="login">
+    <div data-role="header">
+      <h1>Login</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+      <form>
+        <div class="ui-field-contain">
+          <label for="username">Usuário:</label>
+          <input type="text" name="username" id="username" value="">
         </div>
+        <div class="ui-field-contain">
+          <label for="password">Senha:</label>
+          <input type="password" name="password" id="password" value="">
+        </div>
+        <a href="#cadastrarCliente" class="ui-btn ui-btn-b">Entrar</a>
+      </form>
+    </div>
+  </div>
 
-        <div class="row">
-          <div class="col-xs-12">
-              <label>Nome</label>
-              <input type="text" id="nome">
-          </div>
-      </div>
-
+  <!-- Cadastrar Cliente Page -->
+  <div data-role="page" id="cadastrarCliente">
+    <div data-role="header">
+      <h1>Cadastrar Cliente</h1>
+      <a href="#login" class="ui-btn ui-btn-right">Voltar</a>
+    </div>
+    <div data-role="main" class="ui-content">
       <div class="row">
-          <div class="col-xs-12">
-              <label>Documento</label>
-              <input type="text" id="documento">
-          </div>
+        <div class="col-sm-12">
+          <label for="cep">CEP</label>
+          <input type="text" id="cep" />
+        </div>
       </div>
-
-      <div class="row">
-          <div class="col-xs-12">
-              <label>Celular</label>
-              <input type="text" id="celular">
-          </div>
-      </div>
-
       <div class="row">
         <div class="col-xs-12">
-            <label>Endereço</label>
-            <input type="text" id="endereco">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome">
         </div>
       </div>
-
       <div class="row">
         <div class="col-xs-12">
-            <label>Numero</label>
-            <input type="text" id="numero">
+          <label for="documento">Documento</label>
+          <input type="text" id="documento">
         </div>
       </div>
-
-        <div class="row">
-            <div class="col-xs-12">
-                <label>Bairro</label>
-                <input type="text" id="bairro">
-            </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <label for="celular">Celular</label>
+          <input type="text" id="celular">
         </div>
-
-        <div class="row">
-            <div class="col-xs-12">
-                <label>Cidade</label>
-                <input type="text" id="cidade">
-            </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <label for="endereco">Endereço</label>
+          <input type="text" id="endereco">
         </div>
-
-        <div class="row">
-          <div class="col-xs-12">
-              <label>Estado</label>
-              <input type="text" id="estado">
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <label for="numero">Número</label>
+          <input type="text" id="numero">
         </div>
-
-        <div class="row">
-            <div class="col-sm-12"></div>
-            <button id="botao" class="btn btn-primary">
-                Consultar
-            </button>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <label for="bairro">Bairro</label>
+          <input type="text" id="bairro">
         </div>
-
-        <div class="row">
-          <div class="col-xs-12"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <label for="cidade">Cidade</label>
+          <input type="text" id="cidade">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <label for="estado">Estado</label>
+          <input type="text" id="estado">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <button id="botao" class="btn btn-primary">
+            Consultar
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
           <button class="btn btn-success" onclick="enviar()">
-              Salvar Dados
-          </button>
-      </div>
-
-        <div class="row">
-          <div class="col-xs-12"></div>
-          <button class="btn btn-warning" onclick="lerclientes()">
-              Listar Clientes
+            Salvar Dados
           </button>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <a class="ui-btn ui-btn-b" href="#listarClientes">Listar Clientes</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Celular</th>
-            </tr>
-          </thead>
-        </table>
+  <!-- Listar Clientes Page -->
+  <div data-role="page" id="listarClientes">
+    <div data-role="header">
+      <h1>Listar Clientes</h1>
+      <a href="#cadastrarCliente" class="ui-btn ui-btn-right">Cadastrar Novo</a>
+    </div>
+    <div data-role="main" class="ui-content">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Celular</th>
+          </tr>
+        </thead>
+        <tbody id="corpotabela"></tbody>
+      </table>
+      <button class="btn btn-warning" onclick="lerclientes()">Ler Clientes</button>
+    </div>
+  </div>
 
-       <script src="js-bootstrap/bootstrap.bundle.js"></script>
-       <script src="js/index.js"></script>
-       <script src="js/cadastrocliente.js"></script>
-       <script src="js/lerclientes.js"></script>
-    </body>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="js-bootstrap/bootstrap.bundle.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/cadastrocliente.js"></script>
+  <script src="js/lerclientes.js"></script>
+</body>
+
 </html>
